@@ -8,118 +8,171 @@
     android:orientation="vertical"
     android:padding="15dp">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_gravity="center"
-        android:id="@+id/imgStoreLogo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@mipmap/ic_launcher"
-        android:layout_marginVertical="30dp"
-        app:civ_border_color="@color/gray_300"
-        app:civ_border_width="2dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="가게이름"
-        android:textSize="15sp"/>
-
-    <TextView
-        android:id="@+id/txtStoreName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="가게명"
-        android:textSize="20dp"
-        android:textColor="@color/black"/>
-
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/gray_300"
-        android:layout_marginVertical="20dp"/>
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="평점"
-        android:textSize="15sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_gravity="center"
+                android:id="@+id/imgStoreLogo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginVertical="30dp"
+                app:civ_border_color="@color/gray_300"
+                app:civ_border_width="2dp"/>
 
-        <me.zhanghai.android.materialratingbar.MaterialRatingBar
-            android:id="@+id/storeRating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialRatingBar.RatingBar"
-            android:minHeight="32dp"
-            android:maxHeight="32dp"
-            app:mrb_progressTint="@color/black"
-            app:mrb_fillBackgroundStars="true"
-            android:rating="4.5"
-            android:isIndicator="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="가게이름"
+                android:textSize="15sp"/>
 
-        <TextView
-            android:id="@+id/txtRating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:text="(3.5)"
-            android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/txtStoreName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가게명"
+                android:textSize="20dp"
+                android:textColor="@color/black"/>
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_300"
+                android:layout_marginVertical="20dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/gray_300"
-        android:layout_marginVertical="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="평점"
+                android:textSize="15sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/storeRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"
+                    android:minHeight="32dp"
+                    android:maxHeight="32dp"
+                    app:mrb_progressTint="@color/black"
+                    app:mrb_fillBackgroundStars="true"
+                    android:rating="4.5"
+                    android:isIndicator="true"/>
+
+                <TextView
+                    android:id="@+id/txtRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="(3.5)"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_300"
+                android:layout_marginVertical="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="대표 전화번호"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/txtPhoneNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1588-03255"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/btnCall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="전화 주문"
+                    android:backgroundTint="@color/black"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_300"
+                android:layout_marginVertical="20dp"/>
 
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="대표 사이트"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="대표 전화번호"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
 
-        <TextView
-            android:id="@+id/txtPhoneNum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1588-03255"
-            android:textSize="20sp"
-            android:textColor="@color/black"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/txtWebSite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="https://"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
 
-        <Button
-            android:id="@+id/btnCall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="전화 주문"
-            android:backgroundTint="@color/black"/>
+                <Button
+                    android:id="@+id/btnLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사이트 연결"
+                    android:backgroundTint="@color/black"/>
 
-    </LinearLayout>
+            </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/gray_300"
-        android:layout_marginVertical="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_300"
+                android:layout_marginVertical="20dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </LinearLayout>

@@ -46,16 +46,25 @@ class ViewStoreDetailActivity : AppCompatActivity() {
                 .check()
         }
 
+//        사이트 연결 버튼 클릭 시  인터넷 사이트로 연결
+
+        btnLink.setOnClickListener {
+            val myUri = Uri.parse("${mStoreData.storeWebURL}")  // 사이트 주소 바로 입력.
+            val myIntent = Intent( Intent.ACTION_VIEW,  myUri )
+            startActivity( myIntent )
+        }
+
     }
 
     fun setValues() {
 
+//        스토어 데이터 태그에 맞춰서 넣기
         Glide.with(this).load(mStoreData.storeImgUri).into(imgStoreLogo)
         txtStoreName.text = mStoreData.storeName
         txtPhoneNum.text = mStoreData.storePhoneNum
         storeRating.rating = mStoreData.storeRating.toFloat()
         txtRating.text = "(${mStoreData.storeRating})"
-
+        txtWebSite.text = mStoreData.storeWebURL
     }
 
 }

@@ -8,6 +8,7 @@ class StoreData(
     val storeRating : Double,
     val storePhoneNum : String,
     val storeImgUri : String,
+    val storeWebURL : String,
 ) : Serializable {
 
 }
