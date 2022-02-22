@@ -3,10 +3,11 @@ package com.neppplus.pizzaorderapp_20220221.datas
 import java.io.Serializable
 
 
-class PizzaData(
+class StoreData(
     val storeName : String,
-    val storeImgUri : String,
     val storeRating : Double,
+    val storePhoneNum : String,
+    val storeImgUri : String,
 ) : Serializable {
 
 }

@@ -8,23 +8,22 @@ import android.widget.ArrayAdapter
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.neppplus.pizzaorderapp_20220221.R
-import com.neppplus.pizzaorderapp_20220221.datas.PizzaData
+import com.neppplus.pizzaorderapp_20220221.datas.StoreData
 import de.hdodenhof.circleimageview.CircleImageView
-import kotlinx.android.synthetic.main.pizza_list_item.view.*
 import me.zhanghai.android.materialratingbar.MaterialRatingBar
 
-class PizzaAdapter(
+class StoreAdapter(
     val mContext : Context,
     val resId : Int,
-    val mList : ArrayList<PizzaData>,
-) : ArrayAdapter<PizzaData>(mContext, resId, mList) {
+    val mList : ArrayList<StoreData>,
+) : ArrayAdapter<StoreData>(mContext, resId, mList) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
         var tempRow = convertView
 
         if (tempRow == null){
-            tempRow = LayoutInflater.from(mContext).inflate(R.layout.pizza_list_item, null)
+            tempRow = LayoutInflater.from(mContext).inflate(R.layout.store_list_item, null)
         }
 
         val row = tempRow!!

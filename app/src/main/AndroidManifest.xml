@@ -11,9 +11,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PizzaOrderApp_20220221">
+        android:theme="@style/Theme.PizzaOrderApp_20220221"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name=".ViewPizzaDetailActivity"
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewStoreDetailActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

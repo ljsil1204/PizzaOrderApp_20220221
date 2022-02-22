@@ -3,8 +3,6 @@ package com.neppplus.pizzaorderapp_20220221
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.neppplus.pizzaorderapp_20220221.adapters.MainViewPagerAdapter
-import com.neppplus.pizzaorderapp_20220221.adapters.PizzaAdapter
-import com.neppplus.pizzaorderapp_20220221.datas.PizzaData
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
