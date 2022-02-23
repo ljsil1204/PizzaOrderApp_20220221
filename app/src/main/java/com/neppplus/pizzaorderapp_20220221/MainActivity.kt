@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 //       뷰페이져에  fragment 어댑터 연결
         mAdapter = MainViewPagerAdapter(supportFragmentManager)
         mainViewPager.adapter = mAdapter
+        mainViewPager.offscreenPageLimit = 4
 
 //        탭레이아웃 , 뷰페이져 연결
         mainTanLayout.setupWithViewPager(mainViewPager)

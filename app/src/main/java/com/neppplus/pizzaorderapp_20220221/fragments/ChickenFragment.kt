@@ -10,12 +10,12 @@ import com.neppplus.pizzaorderapp_20220221.R
 import com.neppplus.pizzaorderapp_20220221.ViewStoreDetailActivity
 import com.neppplus.pizzaorderapp_20220221.adapters.StoreAdapter
 import com.neppplus.pizzaorderapp_20220221.datas.StoreData
-import kotlinx.android.synthetic.main.fragment_pizza.*
+import kotlinx.android.synthetic.main.fragment_chicken.*
 
 class ChickenFragment : Fragment() {
 
     lateinit var mAdapter : StoreAdapter
-    val mPizzaList = ArrayList<StoreData>()
+    val mChickenList = ArrayList<StoreData>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,13 +33,13 @@ class ChickenFragment : Fragment() {
 
     fun setupEvents(){
 
-//        피자 리스트뷰 클릭시 동작
-        pizzaListView.setOnItemClickListener { adapterView, view, position, l ->
+//        치킨 리스트뷰 클릭시 동작
+        chickenListView.setOnItemClickListener { adapterView, view, position, l ->
 
-            val clickedPizza = mPizzaList[position]
+            val clickedChicken = mChickenList[position]
 
             val myIntent = Intent(requireContext(), ViewStoreDetailActivity::class.java)
-            myIntent.putExtra("store", clickedPizza)
+            myIntent.putExtra("store", clickedChicken)
             startActivity(myIntent)
 
 
@@ -48,24 +48,17 @@ class ChickenFragment : Fragment() {
 
     fun setValues(){
 
-//        피자 리스트뷰 데이터
-        mPizzaList.add(StoreData("피자헛",2.5, "1588-5588",
-            "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FnkQca%2FbtqwVT4rrZo%2FymhFqW9uRbzrmZTxUU1QC1%2Fimg.jpg",
-            "https://www.pizzahut.co.kr/main"))
-        mPizzaList.add(StoreData("파파존스", 5.0, "1577-8080",
-            "http://mblogthumb2.phinf.naver.net/20160530_65/ppanppane_1464617766007O9b5u_PNG/%C6%C4%C6%C4%C1%B8%BD%BA_%C7%C7%C0%DA_%B7%CE%B0%ED_%284%29.png?type=w800",
-            "https://pji.co.kr/"))
-        mPizzaList.add(StoreData("도미노피자", 3.5, "1577-3082",
-            "https://pbs.twimg.com/profile_images/1098371010548555776/trCrCTDN_400x400.png",
-            "https://web.dominos.co.kr/main"))
-        mPizzaList.add(StoreData("미스터피자", 4.0, "1577-0077",
-            "https://post-phinf.pstatic.net/MjAxODEyMDVfMzYg/MDAxNTQzOTYxOTA4NjM3.8gsStnhxz7eEc9zpt5nmSRZmI-Pzpl4NJvHYU-Dlgmcg.7Vpgk0lopJ5GoTav3CUDqmXi2-_67S5AXD0AGbbR6J4g.JPEG/IMG_1641.jpg?type=w1200",
-            "https://www.mrpizza.co.kr/"))
+//        치킨 리스트뷰 데이터
+        mChickenList.add(StoreData("교촌치킨",2.5, "1577-1991", "http://2.bp.blogspot.com/-kk4b9vZMcYg/VIlnsZyB1hI/AAAAAAAAlJ0/EQOv0DRyQIo/s1600/%EA%B5%90%EC%B4%8C%EC%B9%98%ED%82%A8%2B%EB%A1%9C%EA%B3%A0.png", "http://www.kyochon.com/main/"))
+        mChickenList.add(StoreData("깐부치킨", 5.0, "1544-9226", "https://kkotsbom.com/kkotsbom/wp-content/uploads/2020/08/%EA%B9%90%EB%B6%80%EC%B9%98%ED%82%A8-1024x1024.png", "http://www.kkanbu.co.kr/home/"))
+        mChickenList.add(StoreData("굽네치킨", 3.5, "1661-9494", "https://www.goobne.co.kr/resources/images/contents/brand/BI_KOR_2.jpg", "https://www.goobne.co.kr/index_1.jsp#0"))
+        mChickenList.add(StoreData("BHC", 4.0, "1577-5577", "https://mblogthumb-phinf.pstatic.net/20160507_10/ppanppane_1462549491506P8Sej_PNG/Untitled-1-28.png?type=w800", "https://www.bhc.co.kr/"))
+        mChickenList.add(StoreData("KFC", 4.0, "02)6020-8368", "https://i.pinimg.com/originals/4f/a2/91/4fa291fc7c8d2811958c1f8f06e70cdd.jpg", "https://www.kfckorea.com/"))
 
 
 //        리스트뷰 객체화 -> 프레그먼트 리스트뷰 어댑터에 연결
-        mAdapter = StoreAdapter(requireContext(), R.layout.store_list_item, mPizzaList)
-        pizzaListView.adapter = mAdapter
+        mAdapter = StoreAdapter(requireContext(), R.layout.store_list_item, mChickenList)
+        chickenListView.adapter = mAdapter
     }
 
 
